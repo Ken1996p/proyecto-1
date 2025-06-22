@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documento</title>
+
+  <!-- Enlace al archivo CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+
+<body>
+  <main>
+
+    <!-- Encabezado -->
+    <header>
+      <h1>Mi sitio web</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contactos</a>
+    </nav>
+
+    <!-- Sección 1: Ofertas y Promociones -->
+    <section class="ofertas-promociones">
+      <div class="encabezado-ofertas">
+        <h2>🔥 Ofertas y Promociones</h2>
+        <p>
+          Aprovechá nuestros descuentos especiales en zapatillas seleccionadas.
+          ¡Solo por tiempo limitado!
+        </p>
+      </div>
+
+      <div class="productos-oferta">
+        <article class="producto">
+          <img src="imagenes/ofertas1.png" alt="Zapatilla en oferta" />
+          <h3>Zapatilla Urbana Dama</h3>
+          <p>S/ 120</p>
+          <button onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/oferta2.png" allst="Zapatilla en oferta" />
+          <h3>Zapatilla Running Caballero</h3>
+          <p>S/ 150</p>
+          <button onclick="agregarAlCarrito(2)">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 2: Zapatillas -->
+    <article class="seccion-zapatillas">
+      <div class="encabezado-zapatillas">
+        <h2>👟 Zapatillas para Damas y Caballeros</h2>
+        <h3>Comodidad, estilo y calidad en cada paso</h3>
+      </div>
+
+      <div class="imagen-zapatillas">
+        <img
+          src="imagenes/zapatillas-2.jpg"
+          alt="Imagen de zapatillas para damas y caballeros"
+        />
+      </div>
+
+      <div class="descripcion-zapatillas">
+        <p>
+          En nuestra tienda encontrarás la mejor selección de zapatillas para
+          <strong>damas y caballeros</strong>, pensadas para acompañarte en tu
+          día a día con <em>estilo y confort</em>.
+        </p>
+
+        <img src="imagenes/Running-shoe.jpg" alt="Zapatilla adicional" width="600" height="400"/>
+
+        <p>
+          Contamos con modelos versátiles que se adaptan a todos los gustos:
+          desde diseños <strong>deportivos</strong> para entrenamientos
+          intensos, hasta opciones <strong>urbanas y casuales</strong> para tu
+          look diario.
+        </p>
+
+        <p>
+          Todos nuestros productos combinan
+          <strong>materiales de alta calidad</strong>,
+          <strong>ergonomía</strong> y
+          <strong>tendencia</strong>, para ofrecerte lo mejor en cada pisada.
+        </p>
+      </div>
+    </article>
+
+    <!-- Sección 3: Tipos de Zapatillas -->
+    <section class="tipos-zapatillas">
+      <div class="encabezado-tipos">
+        <h2>👟 Tipos de Zapatillas</h2>
+        <p>
+          Encuentra el par ideal para cada ocasión. Te ofrecemos diferentes
+          estilos que combinan funcionalidad, moda y comodidad.
+        </p>
+      </div>
+
+      <div class="categorias-zapatillas">
+        <article class="categoria">
+          <img src="imagenes/deportivas.jpeg" alt="Zapatillas deportivas" />
+          <h3>Deportivas</h3>
+          <p>
+            Ideales para entrenamientos, gym y running. Con soporte, ligereza y
+            rendimiento.
+          </p>
+        </article>
+
+        <article class="categoria">
+          <img src="imagenes/urbanas3.avif" alt="Zapatillas urbanas" />
+          <h3>Urbanas</h3>
+          <p>
+            Perfectas para tu día a día. Cómodas, modernas y combinan con todo.
+          </p>
+        </article>
+
+        <article class="categoria">
+          <img src="imagenes/casuales.jpeg" alt="Zapatillas casuales" />
+          <h3>Casuales</h3>
+          <p>
+            Diseños versátiles para looks relajados. Estilo sin sacrificar
+            confort.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 4: Contacto y Redes Sociales -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres saber más? ¡Contáctame!</p>
+
+      <ul class="info-contacto">
+        <li><strong>Email:</strong> <a href="mailto:kencarpio1996@gmail.com">kencarpio1996@gmail.com</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+51901914781">+51 901 914 781</a></li>
+        <li><strong>Ubicación:</strong> Quillabamba, Cusco, Perú</li>
+      </ul>
+
+      <div class="redes-sociales">
+        <a href="https://facebook.com/tuusuario" target="_blank">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://instagram.com/tuusuario" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://wa.me/51901914781" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Carrito de compras (insertado al final) -->
+    <section id="carrito" class="carrito">
+      <h2>🛒 Tu Carrito</h2>
+      <ul id="lista-carrito"></ul>
+      <p>Total: S/ <span id="total">0</span></p>
+      <button id="vaciar">Vaciar carrito</button>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
